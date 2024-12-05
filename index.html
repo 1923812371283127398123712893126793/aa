@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>File Upload</title>
+  <script src="https://challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
+</head>
+<body>
+  <h1>Upload File</h1>
+  <form action="/upload" method="POST" enctype="multipart/form-data">
+    <label for="file">Choose a file to upload:</label>
+    <input type="file" name="file" id="file" required><br><br>
+
+    <!-- Cloudflare Turnstile Widget -->
+    <div class="cf-turnstile" data-sitekey="3x00000000000000000000FF"></div><br>
+
+    <button type="submit">Upload File</button>
+  </form>
+</body>
+</html>
